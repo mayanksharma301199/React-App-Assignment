@@ -8,7 +8,7 @@ const Member = (props) => {
       <Descriptions.Item label="Age">{team.Age}</Descriptions.Item>
       {team.Gender !== "" && <Descriptions.Item label="Gender">{team.Gender}</Descriptions.Item>}
       <Descriptions.Item label="Skills">
-      {team.Skills.map((skill) => {return (<b key={skill}>{skill} </b>);})}
+      {team.Skills !== [] && team.Skills.map((skill) => {return (<b key={skill}>{skill} </b>);})}
       </Descriptions.Item>
     </Descriptions>
   );

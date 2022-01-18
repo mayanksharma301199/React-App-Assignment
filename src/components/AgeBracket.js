@@ -15,11 +15,13 @@ const AgeBracket = (props) => {
       }
 
   return (
-
+    <>
+      <h3>AppBracket</h3>
     <Select defaultValue="Adult" style={{ width: "100%" }} onChange={handleChange}>
     <Option value="Adult">Adult</Option>
     <Option value="Junior">Junior</Option>
   </Select>
+  </>
 
   );
 

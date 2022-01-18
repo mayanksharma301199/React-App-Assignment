@@ -38,9 +38,11 @@ function App() {
       }
     } else {
       setIsModalVisible(visibility);
+      setCurrentModalValue("AgeBracket")
+      setTeamValues({});
     }
 
-    // console.log(teamValues);
+    
   };
 
   const ageBracketValue = (value) => {
@@ -71,7 +73,7 @@ function App() {
     <>
       <div style={{ textAlign: "center", paddingTop: "30px" }}>
         <Button type="primary" onClick={showModal}>
-          Open Modal
+          Create Team
         </Button>
         <TeamModal
           isModalVisible={isModalVisible}
@@ -87,7 +89,6 @@ function App() {
             <Skills ageType={teamValues.AgeBracket} skillsValue={skillsValue} />
           )}
         </TeamModal>
-        <div style={{ textAlign: "center", paddingTop: "30px" }}>
         {
           teamMembers !== [] && teamMembers.map(
 
@@ -99,7 +100,6 @@ function App() {
 
           )
         }
-        </div>
       </div>
     </>
   );

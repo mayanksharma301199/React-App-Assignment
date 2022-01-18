@@ -17,11 +17,13 @@ const Gender = (props) => {
       };
 
     return (
+      <><h3>Gender</h3>
         <Radio.Group name="radiogroup" onChange={onChange} value={value} defaultValue={"Men"}>
         <Radio value={"Men"}>Men</Radio>
         <Radio value={"Women"}>Women</Radio>
         <Radio value={"Coed"}>Coed</Radio>
       </Radio.Group>
+      </>
     );
 
 };

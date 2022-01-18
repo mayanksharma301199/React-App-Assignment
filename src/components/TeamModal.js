@@ -11,7 +11,7 @@ const TeamModal = (props) => {
 
   return (
     <Modal
-      title="Basic Modal"
+      title="Questions"
       visible={props.isModalVisible}
       onOk={handleOk}
       onCancel={handleCancel}

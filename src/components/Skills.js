@@ -5,11 +5,11 @@ const Skills = (props) => {
 
   const adultSkills = ["A", "AA", "AAA", "Novice", "Masters"];
   const juniorSkills = ["Bronze", "Silver", "Gold", "High School", "Club"];
-  const defaultValue = props.ageType === "Adult" ? adultSkills : juniorSkills
+
 
   useEffect(()=>{
 
-    props.skillsValue(defaultValue);
+    props.skillsValue([]);
 
   }, []);
 
@@ -18,6 +18,7 @@ const Skills = (props) => {
   }
 
   return (
+    <><h3>Skills</h3>
     <Checkbox.Group style={{ width: "100%" }} onChange={onChange}>
       <Row>
         {props.ageType === "Adult" ? 
@@ -26,6 +27,7 @@ const Skills = (props) => {
         }
       </Row>
     </Checkbox.Group>
+    </>
   );
 };
 export default Skills;

@@ -20,13 +20,15 @@ const Age = (props) => {
       };
 
     return (
-
-        <Radio.Group name="radiogroup" onChange={onChange} value={value} defaultValue={defaultValue}>
+      <>
+        <h3>Age</h3>
+      <Radio.Group name="radiogroup" onChange={onChange} value={value} defaultValue={defaultValue}>
         {props.ageType === "Adult" ? 
             adultAge.map((element) => {return (<Radio key={element} value={element}>{element}</Radio>);})
            :juniorAge.map((element) => {return (<Radio key={element} value={element}>{element}</Radio>);})
         }
       </Radio.Group>
+      </>
 
     );
 
