@@ -71,7 +71,7 @@ function App() {
 
   return (
     <>
-      <div style={{ textAlign: "center", paddingTop: "30px" }}>
+      <div className="main_container">
         <Button type="primary" onClick={showModal}>
           Create Team
         </Button>
